@@ -20,7 +20,7 @@ double DoubleIntegral::CountSimpsonCubature(){
     double YStep = (YUpLim - YDownLim) / (2 * Ybeating);
 
     // do{
-    prev_val = value;
+    // prev_val = value;
     std::vector<double> sums(9);
     for(double i = XDownLim; i < XUpLim; i += 2 * XStep){
         for(double j = YDownLim; j < YUpLim; j += 2 * YStep){

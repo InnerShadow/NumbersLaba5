@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cmath>
 
-#define EPSILON 10e-5
-
 #include "Integral.hpp"
 #include "DoubleIntegral.hpp"
+
+#define EPSILON 10e-5
 
 // #3
 double func(double x){

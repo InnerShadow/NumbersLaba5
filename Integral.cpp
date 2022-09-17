@@ -39,7 +39,7 @@ double Integral::CountTrapezoidDiscrepancy(double CoeffitientR, double Coeffitie
     Integral integtal(downLim, UpLim, beating * pow(CoeffitientR, -1), accuracy, func);
     double Ir = integtal.CountTrapezoid();
 
-    value = (I - Ir) / (pow(CoeffitientR, CoeffitientP) - 1);
+    value = std::abs((I - Ir) / (pow(CoeffitientR, CoeffitientP) - 1));
 
     return value;
 }
@@ -81,7 +81,7 @@ double Integral::CountSimpsonDiscrepancy(double CoeffitientR, double Coeffitient
     Integral integtal(downLim, UpLim, beating * pow(CoeffitientR, -1), accuracy, func);
     double Ir = integtal.CountSimpson();
 
-    value = (I - Ir) / (pow(CoeffitientR, CoeffitientP) - 1);
+    value = std::abs((I - Ir) / (pow(CoeffitientR, CoeffitientP) - 1));
 
     return value;
 }
